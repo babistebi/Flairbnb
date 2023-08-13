@@ -3,14 +3,8 @@
 <html>
 
 <head>
-    <title>Insert Page page</title>
+    <title>Redirect</title>
 </head>
-<!--<script type="text/javascript">
-	function redirect()
-	{
-		window.location = "http://localhost/project-business";
-	}
-</script>-->
 <body>
     <center>
         <?php
@@ -34,6 +28,7 @@
         $lastName = $_REQUEST['lastName'];
         $birthday = $_REQUEST['birthday'];
         $password = $_REQUEST['psw'];
+        $hash = password_hash($password, PASSWORD_DEFAULT);
 
         $query = "SELECT * FROM registered WHERE username = '$username'";
         $result = mysqli_query($conn, $query);
@@ -54,7 +49,7 @@
         // Insert into database
       
        	$sql = "INSERT INTO registered VALUES ('$email',
-            '$username', '$firstName','$lastName', '$birthday', '$password')";
+            '$username', '$firstName','$lastName', '$birthday', '$hash')";
 
 
         // Check if the query is successful
