@@ -10,6 +10,7 @@
     <div class="nav">
         <div class="nav-container">
             <h1 class="top-header">Flairbnb</h1>
+            <h5 class="slogan">The clever way of travelling</h5>
             <ul class="pull-left">
                 <li id="home"><a href="index.html"><img src="img/heim.png" height="20px" width="20px"></a></li>
                 <li id="about"><a href="#">About</a></li>
@@ -77,8 +78,8 @@
               <h1 class="form-header">Log in</h1>
               <p class="information">Please fill in your Login information</p>
               <hr>
-              <label for="email"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>
+              <label for="email"><b>Username || Email</b></label>
+              <input type="text" placeholder="Enter Username || Email" name="email || username" required>
 
               <label for="psw"><b>Password</b></label>
               <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
@@ -107,28 +108,46 @@
 
 <div class="neighborhood-guides">
     <div class="container">
-    <h2>Neighborhood Guides</h2>
-    <p> Not sure where to stay? We've created neighborhood guides for cities all around the world.</p>
+    <h2>Neighborhood Guides</h2><br>
+    <p> Not sure where to stay? We've created neighborhood guides for cities all around the world.</p><br><br>
+
+    <hr><br>
+
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 ">
             <div class = "thumbnail">
-                <a href="florida.html"><img src="img/Ferienhaus.jpg"><br>Florida</a><br><br>
+                <figure>
+                    <figcaption>Florida</figcaption>
+                    <a href="florida.html"><img src="img/Ferienhaus.jpg"><br></a><br><br>
+                </figure>
             </div>
-             <div class="thumbnail">
-             <a href="mexiko.html"><img src="img/Mexiko.jpg"><br>Mexico</a><br><br>
-             </div>
+            <div class="thumbnail">
+                <figure>
+                    <figcaption>Mexico City</figcaption>
+                    <a href="mexiko.html"><img src="img/Mexiko.jpg"><br></a><br><br>
+                </figure>
+            </div>
         </div>
         <div class="col-md-4">
             <div class = "thumbnail">
-                <a href="italien.html"><img src="img/Italien.jpg" style="width:640px; height:350px;"><br>Italy</a><br><br>
+                <figure>
+                    <figcaption>Tuscany</figcaption>
+                <a href="italien.html"><img src="img/Italien.jpg" style="width:640px; height:350px;"><br></a><br><br>
+                </figure>
             </div>
-             <div class="thumbnail">
-                <a href="schweiz.html"><img src="img/Schweiz.jpg"><br>Switzerland</a><br><br>
-             </div>
+            <div class="thumbnail">
+                <figure>
+                    <figcaption>Alps</figcaption>
+                    <a href="schweiz.html"><img src="img/Schweiz.jpg"><br></a><br><br>
+                </figure>
+            </div>
         </div>
         <div class="col-md-4">
             <div class = "thumbnail">
-                <a href="deutschland.html"><img src="img/Deutschland.jpg" style="height:350px;  width:640px;"><br>Germany</a><br><br>
+                <figure>
+                    <figcaption>Berlin</figcaption>
+                    <a href="deutschland.html"><img src="img/Deutschland.jpg" style="height:350px;  width:640px;"><br></a><br><br>
+                </figure>
             </div>
         </div>
     </div>
@@ -155,24 +174,5 @@
 	    </div>
 	  </div>
 	</div>
-    <!--<script type="text/javascript">
-        // Rufen Sie das Modal-Element ab
-let modal = document.getElementById('id01');
-
-// Fügen Sie einen Event-Listener für Klicks auf das gesamte Dokument hinzu
-document.addEventListener('click', function(event) {
-    // Überprüfen Sie, ob das geklickte Element außerhalb des Modals und nicht das Modal selbst ist
-    if (event.target !== modal && !modal.contains(event.target)) {
-        // Schließen Sie das Modal
-        modal.style.display = 'none';
-    }
-
-    // Überprüfen Sie, ob das geklickte Element in der Navbar ist
-    if (event.target.closest('.nav')) {
-        // Stoppen Sie die Event-Propagation, um das Modal nicht zu schließen
-        event.stopPropagation();
-    }
-});
-    </script>-->
     </body>
 </html>

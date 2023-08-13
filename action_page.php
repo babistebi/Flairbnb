@@ -33,6 +33,7 @@
         $firstName = $_REQUEST['firstName'];
         $lastName = $_REQUEST['lastName'];
         $birthday = $_REQUEST['birthday'];
+        $password = $_REQUEST['psw'];
 
         $query = "SELECT * FROM registered WHERE username = '$username'";
         $result = mysqli_query($conn, $query);
@@ -53,7 +54,7 @@
         // Insert into database
       
        	$sql = "INSERT INTO registered VALUES ('$email',
-            '$username', '$firstName','$lastName', '$birthday')";
+            '$username', '$firstName','$lastName', '$birthday', '$password')";
 
 
         // Check if the query is successful
@@ -63,7 +64,7 @@
                 . " to view the updated data</h3>";
 
             echo nl2br("\n$email\n $username\n "
-                . "$firstName\n $lastName\n $birthday");
+                . "$firstName\n $lastName\n $birthday\n $password");
         } else{
             echo "ERROR: Hush! Sorry $sql. "
                 . mysqli_error($conn);
