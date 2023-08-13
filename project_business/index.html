@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+  </head>
+
+  <body>
+    <div class="nav">
+        <div class="nav-container">
+            <h1 class="top-header">Flairbnb</h1>
+            <ul class="pull-left">
+                <li id="home"><a href="index.html"><img src="img/heim.png" height="20px" width="20px"></a></li>
+                <li id="about"><a href="#">About</a></li>
+                <li id="contact"><a href="#">Contact</a></li>
+            </ul>
+            <ul class="pull-right">
+                <li><a href="#" id="signup" onclick="document.getElementById('id01').style.display='block'">Sign Up</a></li>
+                <li><a href="#" id="login" onclick="document.getElementById('id02').style.display='block'">Log In</a></li>
+            </ul>
+        </div>
+    </div>
+
+<!-- The Modal (contains the Sign Up form) -->
+        <div id="id01" class="modal">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
+            <form class="modal-content" action="action_page.php" method="post"> 
+            
+                <div class="container1">
+                  <h1 class="form-header">Sign Up</h1>
+                  <p class="information">Please fill in this form to create an account.</p>
+                  <hr>
+
+                  <label for="username"><b>Username</b></label>
+                  <input type="text" placeholder="Enter Username" name="username" max="15" a required>
+
+                  <label for="email"><b>Email</b></label><br>
+                  <input type="email" placeholder="Enter Email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required><br>
+
+                  <label for="firstname"><b>First Name</b></label>
+                  <input id="firstname" type="text" placeholder="Enter First Name" name="firstName" required>
+
+                  <label for="lastname"><b>Last Name</b></label>
+                  <input id="lastname" type="text" placeholder="Enter Last Name" name="lastName" required>
+
+                  <label for="birthday"><b>Date of Birth</b></label><br>
+                  <input type="Date" name="birthday"><br><br>
+
+                  <label for="psw"><b>Password</b></label>
+                  <input id="psw" type="password" placeholder="Enter Password" name="psw"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+
+                  <label for="psw-repeat"><b>Repeat Password</b></label>
+                  <input id="psw-repeat" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                  <label>
+                    <input type="checkbox" name="remember" style="margin-bottom:15px"> Remember me
+                  </label>
+
+                  <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signup" onclick="validate()">Sign Up</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+    <!-- The Modal (contains the login form) -->
+    <div id="id02" class="modal">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">X</span>
+        <form class="modal-content" method="post"> 
+        <!--action="action_page.php" method="POST" -->
+            <div class="container">
+              <h1 class="form-header">Log in</h1>
+              <p class="information">Please fill in your Login information</p>
+              <hr>
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
+
+              <label>
+                <input type="checkbox" name="remember" style="margin-bottom:15px"> Remember me
+              </label>
+
+              <div class="clearfix">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="submit" class="login" onclick="validate()">Login</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Find a place to stay.</h1>
+        <p>Rent from people in over 34,000 cities and 192 countries.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div> 
+
+
+<div class="neighborhood-guides">
+    <div class="container">
+    <h2>Neighborhood Guides</h2>
+    <p> Not sure where to stay? We've created neighborhood guides for cities all around the world.</p>
+    <div class="row">
+        <div class="col-md-4">
+            <div class = "thumbnail">
+                <a href="florida.html"><img src="img/Ferienhaus.jpg"><br>Florida</a><br><br>
+            </div>
+             <div class="thumbnail">
+             <a href="mexiko.html"><img src="img/Mexiko.jpg"><br>Mexico</a><br><br>
+             </div>
+        </div>
+        <div class="col-md-4">
+            <div class = "thumbnail">
+                <a href="italien.html"><img src="img/Italien.jpg" style="width:640px; height:350px;"><br>Italy</a><br><br>
+            </div>
+             <div class="thumbnail">
+                <a href="schweiz.html"><img src="img/Schweiz.jpg"><br>Switzerland</a><br><br>
+             </div>
+        </div>
+        <div class="col-md-4">
+            <div class = "thumbnail">
+                <a href="deutschland.html"><img src="img/Deutschland.jpg" style="height:350px;  width:640px;"><br>Germany</a><br><br>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+   <div class="learn-more">
+	  <div class="container">
+		<div class="row">
+	      <div class="col-md-4">
+			<h3>Travel</h3>
+			<p>From apartments and rooms to treehouses and boats: stay in unique spaces in 192 countries.</p>
+			<p><a href="#">See how to travel on Flairbnb</a></p>
+	      </div>
+		  <div class="col-md-4">
+			<h3>Host</h3>
+			<p>Renting out your unused space could pay your bills or fund your next vacation.</p>
+			<p><a href="#">Learn more about hosting</a></p>
+		  </div>
+		  <div class="col-md-4">
+			<h3>Trust and Safety</h3>
+			<p>From Verified ID to our worldwide customer support team, we've got your back.</p>
+			<p><a href="#">Learn about trust at Flairbnb</a></p>
+		  </div>
+	    </div>
+	  </div>
+	</div>
+    <!--<script type="text/javascript">
+        // Rufen Sie das Modal-Element ab
+let modal = document.getElementById('id01');
+
+// Fügen Sie einen Event-Listener für Klicks auf das gesamte Dokument hinzu
+document.addEventListener('click', function(event) {
+    // Überprüfen Sie, ob das geklickte Element außerhalb des Modals und nicht das Modal selbst ist
+    if (event.target !== modal && !modal.contains(event.target)) {
+        // Schließen Sie das Modal
+        modal.style.display = 'none';
+    }
+
+    // Überprüfen Sie, ob das geklickte Element in der Navbar ist
+    if (event.target.closest('.nav')) {
+        // Stoppen Sie die Event-Propagation, um das Modal nicht zu schließen
+        event.stopPropagation();
+    }
+});
+    </script>-->
+    </body>
+</html>
