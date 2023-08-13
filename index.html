@@ -72,14 +72,13 @@
     <!-- The Modal (contains the login form) -->
     <div id="id02" class="modal">
       <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">X</span>
-        <form class="modal-content" method="post"> 
-        <!--action="action_page.php" method="POST" -->
+        <form class="modal-content" action="login_page.php" method="post"> 
             <div class="container">
               <h1 class="form-header">Log in</h1>
               <p class="information">Please fill in your Login information</p>
               <hr>
-              <label for="email"><b>Username || Email</b></label>
-              <input type="text" placeholder="Enter Username || Email" name="email || username" required>
+              <label for="username"><b>Username || Email</b></label>
+              <input type="text" placeholder="Enter Username || Email" name="username" required>
 
               <label for="psw"><b>Password</b></label>
               <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
