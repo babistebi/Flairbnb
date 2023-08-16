@@ -4,35 +4,19 @@ html body {
   width: 100%;
   font-family: sans-serif, arial;
   scroll-behavior: smooth;
+  min-height: 100vh;
 
 }
 
-.nav div {
+.nav {
   margin-top: 0;
-  padding-top: 0;
+  padding: 10px;
   background-color: #FC8674;
-}
+  height: 20.5vh;
+  @media (min-width 600px) {
+    padding:20px;
+  }
 
-
-.nav h1 {
-  text-align: center;
-  color: #EEE;
-}
-
-.nav h5 {
-  text-align: center;
-  color: #EEE;
-}
-
-.pull-right li {
-  position: relative;
-  top: -20px;
-}
-
-.pull-left li {
-  display: flex;
-  direction: ltr;
-  position: relative;
 }
 
 .nav a {
@@ -43,26 +27,43 @@ html body {
   text-transform: uppercase;
 }
 
-.nav li {
-  display: inline;
-  margin-top: 0;
+.nav h1 {
+  text-align: center;
+  color: #EEE;
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
 }
 
-ul {
-  display: inline;
-  margin-top: 0;
-
+.nav h3 {
+  text-align: center;
+  color: #EEE;
 }
+nav ul {
+  margin: 0;
+  padding: 0;
+  display:grid;
+  grid-template-columns: repeat(5, .1fr);
+  grid-template-rows: 20px;
+  grid-column-gap: 1px;
+  justify-content:center;
+  justify-items:center;
+  list-style-type:none;  
+}
+
+.nav ul li{
+   width:90%;
+   text-align:center;
+   line-height:25px;
+   margin: 0;
+   padding: 0;
+ }
+
 .jumbotron {
-  background-image:url('http://goo.gl/04j7Nn');
-  height: 50vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.jumbotron .container {
   position: relative;
-  top:100px;
+  background-color: #CECECE;
+  height: auto;
+
 }
 
 .jumbotron h1 {
@@ -70,26 +71,51 @@ ul {
   font-size: 48px;  
   font-family: 'Shift', sans-serif;
   font-weight: bold;
-}
+  text-align: center;
+  }
 
 .jumbotron p {
   font-size: 20px;
-  color: #fff;
 }
 
-.learn-more {
-  background-color: #f7f7f7;
+.jumbotron button {
+  
 }
 
-.learn-more h3 {
+.jumbotron button a {
+  color: #FFF;
+}
+.jumbotron button:hover{
+  transform: scale(1.25) perspective(1px);
+  background-color: #FC8674;
+}
+.further-information h3 {
   font-family: 'Shift', sans-serif;
   font-size: 18px;
   font-weight: bold;
 }
 
-.learn-more a {
-  color: #00b0ff;
+.learn-more {
+  display: inline ;
+  position: absolute;
+  max-width: 100%;
+  background-color: #CECECE;
+  margin-left: 30%;
+  padding: 0;
+  width: 40%;
 }
+
+.learn-more a {
+  border-style: 2px solid #00000;
+  text-decoration: none;
+  color: #5A5A5A;
+}
+
+.learn-more a:hover{
+text-decoration: underline;
+font-weight: bold;
+
+} 
 .neighborhood-guides {
     background-color: #efefef;
     border-bottom: 1px solid #dbdbdb;
@@ -97,6 +123,7 @@ ul {
 .neighborhood-guides h2 {
     color: #393c3d;
     font-size: 24px;
+    margin-bottom: 2rem;
 }
 .neighborhood-guides p {
     margin-bottom: 13px;
@@ -104,27 +131,6 @@ ul {
 }
 .neighborhood-guides hr {
   max-width: 200px;
-}
-
-#signup, #login {
-display: inline-flex;
-position: relative;
-margin-top: 0;
-padding-top: 0;
-}
-
-#about #contact {
-  display: flex;
-  position: relative;
-  top: -1px;
-}
-
-.pull-right {
-  display: flex;
-  direction: rtl;
-  margin-top: 0;
-  padding: 0;
-
 }
 
 .neighborhood-guides {
@@ -136,6 +142,8 @@ padding-top: 0;
   margin-left: auto;
   margin-right: auto;
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .neighborhood-guides h2, p {
@@ -173,7 +181,7 @@ input[type=text]:hover, input[type=password]:hover, input[type=email]:hover inpu
 }
 
 /* Set a style for all buttons */
-button {
+.frm-btn {
   background-color: #04AA6D;
   color: white;
   padding: 14px 20px;
@@ -184,18 +192,18 @@ button {
   opacity: 0.9;
 }
 
-button:hover {
+.frm-btn:hover {
   opacity:1;
 }
 
 /* Extra styles for the cancel button */
-.cancelbtn {
+#cancelbtn {
   padding: 14px 20px;
   background-color: #f44336;
 }
 
 /* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
+#cancelbtn, #signupbtn {
   float: left;
   width: 100%;
 }
@@ -263,6 +271,10 @@ hr {
   .cancelbtn, .signupbtn {
     width: 100%;
   }
+}
+
+#terms {
+  color: #000000;
 }
 
 .information {
